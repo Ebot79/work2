@@ -1,0 +1,50 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Job name:</b>
+  <%= @job.job_name %>
+</p>
+
+<p>
+  <b>Priority:</b>
+  <%= @job.priority %>
+</p>
+
+<p>
+  <b>Work order dates:</b>
+  <%= @job.work_order_dates %>
+</p>
+
+<p>
+  <b>Job type:</b>
+  <%= @job.job_type %>
+</p>
+
+<p>
+  <b>Description of work:</b>
+  <%= @job.description_of_work %>
+</p>
+
+<p>
+  <b>Bill date:</b>
+  <%= @job.bill_date %>
+</p>
+
+<p>
+  <b>Paid date:</b>
+  <%= @job.paid_date %>
+</p>
+
+<p>
+  <b>Labor:</b>
+  <%= @job.labor %>
+</p>
+
+<p>
+  <b>Materials:</b>
+  <%= @job.materials %>
+</p>
+
+
+<%= link_to 'Edit', edit_job_path(@job) %> |
+<%= link_to 'Back', jobs_path %>

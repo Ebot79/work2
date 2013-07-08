@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  job_name: MyString
+  priority: MyString
+  work_order_dates: 2013-06-23
+  job_type: MyString
+  description_of_work: MyText
+  bill_date: 2013-06-23
+  paid_date: 2013-06-23
+  labor: 1.5
+  materials: 1.5
+
+two:
+  job_name: MyString
+  priority: MyString
+  work_order_dates: 2013-06-23
+  job_type: MyString
+  description_of_work: MyText
+  bill_date: 2013-06-23
+  paid_date: 2013-06-23
+  labor: 1.5
+  materials: 1.5

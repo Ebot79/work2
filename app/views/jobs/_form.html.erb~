@@ -1,0 +1,57 @@
+<%= form_for(@job) do |f| %>
+  <% if @job.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@job.errors.count, "error") %> prohibited this job from being saved:</h2>
+
+      <ul>
+      <% @job.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :job_name %><br />
+    <%= f.text_field :job_name %>
+  </div>
+  <div class="field">
+    <%= f.label :priority %><br />
+    <%= f.text_field :priority %>
+  </div>
+   <div class="field">
+    <%= f.label :location_id %><br />
+ 		<%= collection_select(:job, :location_id, location.all, :id, :location_name) %>
+  </div>
+  <div class="field">
+    <%= f.label :work_order_dates %><br />
+    <%= f.date_select :work_order_dates %>
+  </div>
+  <div class="field">
+    <%= f.label :job_type %><br />
+    <%= f.text_field :job_type %>
+  </div>
+  <div class="field">
+    <%= f.label :description_of_work %><br />
+    <%= f.text_area :description_of_work %>
+  </div>
+  <div class="field">
+    <%= f.label :bill_date %><br />
+    <%= f.date_select :bill_date %>
+  </div>
+  <div class="field">
+    <%= f.label :paid_date %><br />
+    <%= f.date_select :paid_date %>
+  </div>
+  <div class="field">
+    <%= f.label :labor %><br />
+    <%= f.text_field :labor %>
+  </div>
+  <div class="field">
+    <%= f.label :materials %><br />
+    <%= f.text_field :materials %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
