@@ -2,6 +2,7 @@
 <html>
 <head>
   <title>Work2</title>
+ <link rel="stylesheet" href="http://railsgirls.com/assets/bootstrap.css">
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
@@ -12,10 +13,34 @@
   <%= content_tag :div, msg, :id => "flash_#{name}" %>
 <% end %>
 
-
-
-
-<%= yield %>
-
+<div id="user_nav">
+  <% if current_user %>
+    Logged in as <%= current_user.email %>.
+    <%= link_to "Log out", log_out_path, :method => :delete %>
+  <% else %>
+    <%= link_to "Sign up", sign_up_path %> or
+    <%= link_to "log in", log_in_path %>
+  <% end %>
+</div>
+<div class="navbar navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="brand" href="/">work</a>
+      <ul class="nav">
+        <li class="active"><a href="/jobs">Jobs</a></li>
+        <li class="active"><a href="/locations">Locations</a></li>
+        <li class="active"><a href="/contacts">Contacts</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <%= yield %>
+</div>
+<footer>
+  <div class="container">
+    Eric Sheasby 2013
+  </div>
+</footer>
 </body>
 </html>

@@ -6,4 +6,7 @@
 <%= link_to "Locations", locations_path %>
 
 
-<p>Find me in app/views/home/index.html.erb</p>
+
+
+
+<p>Find me in app/views/home/index.html.erb</p> 
